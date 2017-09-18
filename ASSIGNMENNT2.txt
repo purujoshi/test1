@@ -1,0 +1,127 @@
+---------------------------------------- 1st part--------------------------------------------------------------------
+1. CUSTOMER: 
+	custId,firstName,lastNmae,age,city,mobileNumber,dob
+	insert minimum 5 records
+
+ create table customer(custId int,firstName varchar2(20),lastName varchar2(20),city varchar2(20),mobileNumber number,dob date);
+
+ @C:\Users\ASPL\Desktop\day2assignment.sql
+
+
+2. BRANCH
+	branchId,branchName,city
+
+  create table branch(branchId int,branchName varchar2(20),city varchar2(20));
+
+  @C:\Users\ASPL\Desktop\branch.sql
+
+3. ACCOUNT
+	accountNumber,openingBalance,typeOfAccount,status,BankId,CustId
+	add the column bankId and custId using alter command
+
+  create table account(accountNumber number,openingBalance number,typeOfAccount varchar2(10),status varchar(10));
+
+  @C:\Users\ASPL\Desktop\account.sql
+
+  alter table account add BankId number;
+
+  alter table account add CustId number;
+
+4. TRANSACTION
+	transactionId,transactionDate,mediumOfTransaction,transactionAmount
+	drop the column mediumOfTransaction
+	rename column transactionDate to tranDate and transactionAmount to tranAmount
+
+  create table transaction(transactionId number,transactionDate date,MediumOfTransaction varchar2(20) ,TransactionAmount number);
+
+
+   @C:\Users\ASPL\Desktop\transaction.sql
+
+    alter table transaction drop column MediumOfTransaction;
+
+    alter table transaction rename transactionDate to tranDate;
+
+    alter table transaction rename column transactionAmount to tranAmt;
+
+5. LOAN
+	loanId,loanAmount.
+	add the column bankId and customerId using alter command	
+
+
+   create table loan(loadId number,loanAmount number);
+
+   @C:\Users\ASPL\Desktop\loan.sql
+
+   alter table loan add CustomerId number;
+
+   alter table loan add bankId number;
+
+
+
+---------------------------------CONSTRAINTS-------------------------------------------------
+
+1. Table-----> Customer
+	custId,firstName,lastNmae,age,city,mobileNumber,dob
+        Add the following constraints:
+  	1. custId is the primary key
+	2. firstName is not null
+	3.age must be greater than 21
+	4.mobileNumber must be unique
+
+	1.alter table customer add constraint c_pk primary key (custId);
+	2.alter table customer modify firstName varchar(10) not null;
+	3.alter table customer add constraint age check(age>0);
+	4.alter table customer add constraint m_pk  unique(mobileNumber);
+---------------------------------------------------------------------------
+2. Table----> Branch
+	branchId,branchName,city
+	Add the following constraints:
+	1.branchId is primary key
+	2.branchName is not null
+	3.city is not null
+
+	1. alter table branch add constraint b_pk primary key (branchId);
+	2. alter table branch modify branchName varchar(10) not null;
+	3.alter table branch modify city varchar(10) not null;
+--------------------------------------------------------------------------
+
+3. Table-----> Account
+	accountNumber,openingBalance,typeOfAccount,status,BankId,CustId
+	Add the following constraints:
+	1.accountNumber is primary key
+	2.openingBalance must be greater than 5000
+	3.typeOfAccount must be savings/current
+	4.bankId is foreign key refer to branchId (primary key) branch table
+	5.custId is foreign key refer to Customer (primary key) customer table
+
+
+	1.alter table account add constraint n_pk primary key (accountNumber);
+	2.alter table account add constraint ba_pk check(openingBalance>5000);
+	3.alter table account add constraint da_pk check (typeOfAccount in ('savings', 'current'));
+	4.alter table account add constraint dt_fk1 foreign key (bankId) references branch(branchId);
+	5.alter table account add constraint ft_fk1 foreign key (custId) references customer(custId);
+
+
+
+-----------------------------------------------------------------------------------------------------------
+   
+
+4. Table----> Transaction
+	transactionId,transactionDate,mediumOfTransaction,transactionAmount
+	Add the following constraints:
+	1.transactionId is primary key
+
+        1.alter table transaction add constraint l_pk primary key (transactionId);
+
+----------------------------------------------------------------------------------------------------------
+5. Table ----> Loan
+	loanId,loanAmount.
+	Add the following constraints:
+	1.loanId is primary key;
+	2.loanAmount must be positive
+	3.bankId is foreign key referencing to loan(loanId)
+
+	 1. alter table loan add constraint tp_pk primary key (loadId);
+ 	 2. alter table loan add constraint pos check (loanAmount>0);
+	 3. alter table loan add constraint tt_fk1 foreign key (bankId) references loan(loadId);
+
