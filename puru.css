@@ -1,0 +1,7 @@
+
+    .divReadable{
+        width:300px;height:250px;
+        text-align: justify;
+        overflow: scroll;
+        border: 5px solid green;padding: 10px;
+    }

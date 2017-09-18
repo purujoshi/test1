@@ -1,0 +1,332 @@
+
+<!--
+
+    shiremen@gmail.com
+<div id="div1">this is div 1</div>
+<p>this is para1</p>
+
+<div id="div2">this is div 2</div>
+<p>this is para2</p>
+
+<div id="div3">this is div 3</div>
+<p>this is para3</p>
+-->
+
+<script src="jquery-3.2.1.min.js"></script>
+
+
+<script>
+/*
+    //Function Expression(FE)
+
+    var f1=function (){
+
+        console.log("hello from FE");
+    }
+
+*/
+  
+      //document.getElementById("span1").innerHTML="hello from jQuery";
+      //$("#span1").html("hello from jQuery1");
+     // var d= new Date();
+      //$("#t1").val(d.getDay()+"/"+d.getMonth()+"/"+d.getFullYear());
+/*
+      $(document).ready(function(){
+          $("#t1").on('keyup',function(){
+              $("#span1").html(this.value);
+          })
+         
+   });
+---------------------------------------------------
+  
+
+$(document).ready(function(){
+    $("#ddl1").change(function(){
+        $("span1").html(ddl1.options[ddl1.selectedIndex].value);
+    })
+})
+
+*/
+
+/*
+$(document).ready(function(){
+    $("#span1").mouseover(function(){
+        $("#div1").html("enter your name:");
+    });
+    $("#span1").mouseover(function(){
+        $("#div1").html("");
+    });
+});
+
+*/
+/*
+$(document).ready(function(){
+    $("#b1").click(function(){
+        var msg="";
+        $("p").each(function(){
+            msg+=$(this).html()+"<br>"
+        });
+        $("#span1").html(msg);
+    })
+})
+--------------------------------------------------------------
+*/
+
+
+/*
+function f1(){
+    sessionStorage.setItem("name",$("#name").val());
+    sessionStorage.setItem("city",$("#city").val());
+    alert("DATA STORED IN SESSION STORAGE");
+}
+
+function f2(){
+    name=sessionStorage.getItem("name");
+    city=sessionStorage.getItem("city");
+    $("#span1").html("name="+ name+", city=" + city);
+}
+
+*/
+
+
+
+
+</script>
+
+<!--
+<button id="b1">GET ALL PARAGRAPH CONTENT</button><br>
+<p>this is paragraph 1</p><br>
+<div>this is div 1, contains shit</div><br>
+<p>this is paragraph 1</p><br>
+<div>this is div 1, contains no shit</div><br>
+
+<span id="span1"></span>
+-->
+
+<!--
+<h1>Web Storage (Session storage)</h1>
+
+ENTER NAME: <input type="text" id="name"><br>
+ENTER CITY: <input type="text" id="city"><br>
+<button onclick="f1()">STORE</button>
+<button onclick="f2()">GET DATA FROM LOCALSTORAGE</button>
+<span id="span1"></span>
+<hr>
+----------------------------------------------------------------
+------------------------------CANVAS EXAMPLE------------------------
+
+--------------------------WEB WORKER--------------------------------
+- like threads in java
+
+-->
+<!--
+<script>
+    var w;
+    function startWorker(){
+        w= new Worker("jq.js");
+        w.onmessage=function(event){
+            document.getElementById("result").innerHTML=event.data;
+
+        }
+    }
+    function stopWorker(){
+        w.terminate();
+        w=undefined;
+    }
+</script>
+
+<p>COUNT NUMBERS:<output id="result"></output><br>
+
+    <button onclick="startWorker()">startWorker</button>
+    <button onclick="stopWorker()">stopWorker</button>
+
+    <span id="1"></span>
+
+-->
+
+<!--
+<form action="a2.html">
+    <input type="submit" value="Submit" onclick='return confirm("are u sure u want to submit?")'>
+</form>
+
+-->
+
+<!--
+<input type="button" id="b1" value="click me">
+
+<script>
+    var b1=document.getElementById("b1");
+    b1.addEventListener("click",f1);
+
+    function f1(e){
+        alert("hello button pressed");
+
+    }
+</script>
+
+-->
+
+<!--
+<h1>Drag and Drop</h1>
+<style>
+    .leftBox {
+        float: left;
+        width: 250px;
+        height: 250px;
+        border: 1px solid red;
+    }
+    .rightBox {
+        float: left;
+        width: 250px;
+        height: 250px;
+        border: 2px solid green;
+    }
+</style>
+<script>
+    var id = "";
+    allowDrop = function(ev){
+        ev.preventDefault();
+    }
+    dragStart = function (ev) {
+        id = ev.target.id;
+    }
+    drop = function (ev) {
+        ev.target.append(document.getElementById("pic1"));
+    }
+</script>
+<h2><pre>Section1                       Section-2</pre></h2>
+<section id="section1" class="leftBox">
+        <img src="modi.png" id="pic1" ondragstart="dragStart(event)" />
+</section>
+
+<section id="section2" class="rightBox" ondragover="allowDrop(event)" ondrop="drop(event)">
+    
+</section>
+-->
+
+
+
+<script src="jquery-3.2.1.min.js"></script>
+
+<!--
+<h1 id="id1">ALLSTATE</h1>
+<h1 id="id2">Amazon</h1>
+
+<span id="#span1"></span>
+
+<script>
+    $(document).ready(function(){
+        $("#id1,#id2").click(function(){
+            $(this).before('<div>division inserted</div>');
+        });
+    });
+</script>
+-->
+
+<h2>jquery append and prepend</h2>
+
+<script>
+    $(document).ready(function(){
+        $("#div1").prepend('<h1> LIST OF GIRLS </h1>');
+        $("#div1").append('<hr color="GREEN"/></hr>');
+
+    });
+</script>
+
+<div id="div1">
+    <ol>
+        <li>rani</li>
+        <li>pani</li>
+        <li>dhani</li>
+    </ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

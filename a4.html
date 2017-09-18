@@ -1,0 +1,653 @@
+<!--
+<script>
+
+function Display() {
+    
+        var num1=document.getElementById("t1");
+        var num1=t1.value;
+        num1=parseInt(num1);
+
+        var num2=document.getElementById("t2");
+        var num2=t2.value;
+        num2=parseInt(num2);
+        //alert("hello"+ name);
+
+        var span1=document.getElementById("span1");
+        span1.innerHTML=`Sum of ${num1} and ${num2} is ${num1+num2}`;
+        
+    }
+</script>
+    
+         Enter the number1: <input type="text" id="t1"><br> 
+         Enter the number2: <input type="text" id="t2"><br> 
+         <input type="button" value="ADD" onclick='Display()'><br>   
+         <span id="span1"></span>
+
+------------------------------------------------------------------
+
+
+<script>
+    function Display(name){
+        alert("Hello " + name);
+    }
+</script>
+
+<input type="text" placeholder="Enter name" id=t1><br>
+<input type="button" value="Display" onclick="Display(t1.value)">
+
+---------------------------------------------------------------------------
+
+
+<script>
+    function ChangeColor(c){
+        document.bgColor=c;
+
+    }
+</script>
+
+   <input type="button" value="RED" onclick="ChangeColor(this.value)">
+   <input type="button" value="GREEN" onclick="ChangeColor(this.value)">
+   <input type="button" value="BLUE" onclick="ChangeColor(this.value)">
+---------------------------------------------------------------------
+
+<script>
+ function Display() {
+    
+        var num1=document.getElementById("t1");
+        var num1=t1.value;
+        num1=parseInt(num1);
+
+        var num2=document.getElementById("t2");
+        var num2=t2.value;
+        num2=parseInt(num2);
+
+        var num3=document.getElementById("t3");
+        var num3=t3.value;
+        num2=parseInt(num2);
+
+        var span1=document.getElementById("span1");
+        var total=
+        span1.innerHTML=`TOTAL :  ${num1+num2+num3}`;
+
+        var span2=document.getElementById("span2");
+        span1.innerHTML=`AVERAGE :  ${(num1+num2+num3)/3}`;
+
+        var span3=document.getElementById("span3");
+        span1.innerHTML=Result(`$(num1+num2+num3)/3)`);
+        
+    }
+
+    function Result(avg){
+
+        if(avg>=35)
+        var result ="PASS";
+        else
+        result="FAIL"
+
+        return (result)
+
+    }
+</script>
+<form action="">
+
+    
+    MATHS: <input type="text" id="t1"><span id="span1"></span><br> 
+    PHYSICS: <input type="text" id="t2"><span id="span2"></span><br>
+    CHEMISTRY: <input type="text" id="t3"><span id="span3"></span><br> 
+
+    TOTAL: <input type="text" value=`${(num1+num2+num3)}`>
+    AVERAGE: <input type="text" value=`${(num1+num2+num3)/3}`>
+    RESULT: <input type="text" value=result>
+
+    
+    <input type="button" value="SUBMIT" onclick='Display()'><br> 
+    <input type="reset"><br> 
+
+</form>
+   -------------------------------------------------------------- 
+ 
+
+<script>
+
+var d=new Date();
+
+  function ShowDate(){
+
+var m = d.getDate()+"/"+ (d.getMonth()+1)+"/"+d.getFullYear();
+document.getElementById("span1").innerHTML=m;
+   }
+
+
+function ShowTime(){
+var t = d.getHours()+":"+ d.getMinutes()+":"+d.getSeconds();
+document.getElementById("span1").innerHTML=t;
+
+}
+</script>
+
+<button onclick='ShowDate()'>SHOW DATE</button><br>
+<button onclick='ShowTime()'>SHOW TIME</button>
+
+<span id="span1"></span>
+-------------------------------------------------------------------
+
+
+<script>
+        
+        var d=new Date();
+        
+          function Show(p){
+
+            if(p=="date")
+                 var m = d.getDate()+"/"+ (d.getMonth()+1)+"/"+d.getFullYear();
+            else if(p=="time")
+                m = d.getHours()+":"+ d.getMinutes()+":"+d.getSeconds();
+
+        document.getElementById("span1").innerHTML=m;
+        
+        
+        }
+</script>
+        
+        <button onclick="Show(this.value)" value="date">SHOW DATE</button><br>
+        <button onclick="Show(this.value)" value="time">SHOW TIME</button>
+        
+        <span id="span1"></span>
+
+---------------------------------------------------------------------
+   
+
+<h1>WISHES</h1>
+
+<script>
+
+
+
+var w= d.getHours();
+function Welcome(){
+    var d = new Date();
+        var x= d.getDay();
+
+        if(x==0 || x==6)
+        document.getElementById("span1").innerHTML="Enjoy sasti masti";
+        else
+        document.getElementById("span1").innerHTML="Kaam karo chup chaap";
+
+}
+
+</script>
+
+<span id="span1"></span>
+
+
+<button onclick='Welcome()'>WELCOME</button>
+
+-------------------------------------------------------------------
+
+
+
+
+<script>
+    function f1(){
+        var name=document.getElementById("t1").value;
+        var gender=document.getElementsByName("gender");
+
+        var msg="";
+
+        if (gender[0].checked)
+         msg="Hello Mr." + name;
+         else if (gender[1].checked)
+         msg="Hello Miss." + name;
+
+         document.getElementById("span1").innerHTML=msg
+        
+    }
+</script>
+
+
+ <h1>java Script using UI</h1>
+
+ Enter Name: <input type="text" id="t1"><br>
+ GENDER:
+
+ <input type="radio" name="gender" value="MR.">MALE
+ <input type="radio" name="gender" value="MISS.">FEMALE <br>
+ <input type="button" value="CLICK" onclick="f1()"><br>
+
+ <span id="span1"></span>
+-------------------------------------------------------------------
+
+
+ <form>
+        
+        <h1>QUESTION PAPER</h1>
+        
+        1. WHAT DAY IS TODAY? <br>
+        <input type="radio" name= "option1" id="t1">10 <br>
+        <input type="radio" name= "option1" id="t2">11 <br>
+        <input type="radio" name= "option1" id="t3">12 <br>
+        <input type="radio" name= "option1" id="t4">13 <br>
+        <input type="radio" name= "option1" id="t5">14 <br>
+        
+        2. WHAT MONTH IS THIS?<br>
+        <input type="radio" name= "option2">6<br>
+        <input type="radio" name= "option2">7<br>
+        <input type="radio" name= "option2">8<br>
+        <input type="radio" name= "option2">9<br>
+        <input type="radio" name= "option2">10<br>
+        <br>
+        3. WHAT YEAR IS THIS ?<br>
+        <input type="radio" name= "option3">2013<br>
+        <input type="radio" name= "option3">2014<br>
+        <input type="radio" name= "option3">2015<br>
+        <input type="radio" name= "option3">2016<br>
+        <input type="radio" name= "option3">2017<br>
+        <br>
+        4. WHAT HOUR IS THIS?<br>
+        <input type="radio" name= "option4">9<br>
+        <input type="radio" name= "option4">10<br>
+        <input type="radio" name= "option4">11<br>
+        <input type="radio" name= "option4">12<br>
+        <input type="radio" name= "option4">13<br>
+        <br>
+        
+        5. WHAT MINUTE IS THIS ?<br>
+        <input type="radio" name= "option5">50<br>
+        <input type="radio" name= "option5">51<br>
+        <input type="radio" name= "option5">52<br>
+        <input type="radio" name= "option5">53<br>
+        <input type="radio" name= "option5">58<br>
+
+        
+        
+    </form>
+
+    <input type="button" value="submit"onclick='f1()'>
+    <span id="span1"></span>
+    
+    <script>
+        function f1(){
+            var score=0;
+        
+        var option1=document.getElementsByName("option1");
+        var option2=document.getElementsByName("option2");
+        var option3=document.getElementsByName("option3");
+        var option4=document.getElementsByName("option4");
+        var option5=document.getElementsByName("option5");
+
+       // var msg="";
+
+        if (option1[3].checked)
+         score+=1;
+         if (option2[3].checked)
+          score+=1;
+         if (option3[4].checked)
+          score+=1;
+         if (option4[1].checked)
+          score+=1;
+         if (option5[4].checked)
+          score+=1;
+
+         document.getElementById("span1").innerHTML=`${score}`;
+        
+    }
+        </script>
+    
+ 
+ <!--
+ <script>
+    function Hobbies(){
+
+        var option1=document.getElementsByName("option1");
+        var option2=document.getElementsByName("option2");
+        var option3=document.getElementsByName("option3");
+        var option4=document.getElementsByName("option4");
+        var option5=document.getElementsByName("option5");
+
+        if (option1[0].checked)
+        document.getElementById("span1").innerHTML="reading ";
+        if (option2[0].checked)
+        document.getElementById("span2").innerHTML="singing ";
+        if (option3[0].checked)
+        document.getElementById("span3").innerHTML="dancing ";
+        if (option4[0].checked)
+        document.getElementById("span4").innerHTML="sleeping ";
+        if (option5[0].checked)
+        document.getElementById("span5").innerHTML="sasti masti ";
+
+    }
+</script>
+ 
+    <input type="radio" name= "option1">reading<br>
+    <input type="radio" name= "option2">singing<br>
+    <input type="radio" name= "option3">dancing<br>
+    <input type="radio" name= "option4">sleeping<br>
+    <input type="radio" name= "option5">sasti masti<br>
+
+    <input type="button" value="submit"onclick='Hobbies()'>
+
+    
+    <span id="span1"></span>
+    <span id="span2"></span>
+    <span id="span3"></span>
+    <span id="span4"></span>
+    <span id="span5"></span>
+    <span id="span6"></span>
+   ---------------------------------------------------------- 
+
+    
+<form>
+        
+        <h1>QUESTION PAPER</h1>
+        
+        1. WHAT DAY IS TODAY? <br>
+        
+        <input type="radio" name= "option1" required><br>
+        <input type="radio" name= "option1" id="t1">10 <br>
+        <input type="radio" name= "option1" id="t2">11 <br>
+        <input type="radio" name= "option1" id="t3">12 <br>
+        <input type="radio" name= "option1" id="t4">13 <br>
+        <input type="radio" name= "option1" id="t5">14 <br>
+        
+        2. WHAT MONTH IS THIS?<br>
+        <input type="radio" name= "option2" required><br>
+        <input type="radio" name= "option2">6<br>
+        <input type="radio" name= "option2">7<br>
+        <input type="radio" name= "option2">8<br>
+        <input type="radio" name= "option2">9<br>
+        <input type="radio" name= "option2">10<br>
+        <br>
+        3. WHAT YEAR IS THIS ?<br>
+        <input type="radio" name= "option3" required><br>
+        <input type="radio" name= "option3">2013<br>
+        <input type="radio" name= "option3">2014<br>
+        <input type="radio" name= "option3">2015<br>
+        <input type="radio" name= "option3">2016<br>
+        <input type="radio" name= "option3">2017<br>
+        <br>
+        4. WHAT HOUR IS THIS?<br>
+        <input type="radio" name= "option4" required><br>
+        <input type="radio" name= "option4">9<br>
+        <input type="radio" name= "option4">10<br>
+        <input type="radio" name= "option4">11<br>
+        <input type="radio" name= "option4">12<br>
+        <input type="radio" name= "option4">13<br>
+        <br>
+        
+        5. WHAT MINUTE IS THIS ?<br>
+        <input type="radio" name= "option5" required><br>
+        <input type="radio" name= "option5">50<br>
+        <input type="radio" name= "option5">51<br>
+        <input type="radio" name= "option5">52<br>
+        <input type="radio" name= "option5">53<br>
+        <input type="radio" name= "option5">58<br>
+
+        
+        
+    </form>
+
+    <input type="button" value="submit"onclick='f1()'>
+    <span id="span1"></span>
+    
+    <script>
+        function f1(){
+            var score=0;
+        
+        var option1=document.getElementsByName("option1");
+        var option2=document.getElementsByName("option2");
+        var option3=document.getElementsByName("option3");
+        var option4=document.getElementsByName("option4");
+        var option5=document.getElementsByName("option5");
+
+        if(!option1[1].checked && option1[2].checked && option1[3].checked && option1[4].checked && option1[5].checked)
+               alert("Answer of question 1 needs to be marked!!!!!");
+              
+            
+
+            if(!option2[1].checked && option2[2].checked && option2[3].checked && option2[4].checked && option2[5].checked)
+               alert("Answer of question 2 needs to be marked!!!!!");
+             
+            
+
+      
+            if(!option3[1].checked && option3[2].checked && option3[3].checked && option3[4].checked && option3[5].checked)
+               alert("Answer of question 3 needs to be marked!!!!!");
+             
+               if(!option4[1].checked && option4[2].checked && option4[3].checked && option4[4].checked && option4[5].checked)
+               alert("Answer of question 4 needs to be marked!!!!!");
+              
+            
+
+            if(!option5[1].checked && option5[2].checked && option5[3].checked && option5[4].checked && option5[5].checked)
+               alert("Answer of question 5 needs to be marked!!!!!");
+             
+            
+    
+       
+
+       // var msg="";
+/*
+        if (option1[3].checked)
+         score+=1;
+         if (option2[3].checked)
+          score+=1;
+         if (option3[4].checked)
+          score+=1;
+         if (option4[1].checked)
+          score+=1;
+         if (option5[4].checked)
+          score+=1;
+*/
+         document.getElementById("span1").innerHTML=`${score}`;
+        
+    
+        </script>
+  
+   
+
+<script>
+    function f1()
+    {
+        var colors=document.getElementById("colors");
+        var m=colors.options[selectedIndex].value;
+        document.getElementById("span1").innerHTML=m;
+    }
+
+</script>
+
+<h1> DROP DOWN LIST EXAMPLE</h1>
+
+<select  id="colors" onchange="f1()">
+    <option value="red">red</option>
+    <option value="blue">blue</option>
+    <option value="green">green</option>
+    <option value="yellow">yellow</option>
+</select>
+
+<span id="span1"></span>
+
+
+<!--
+<script>
+    var msg ="hello from global";
+
+    function f1()
+    {
+        var msg ="hello from f1";
+        alert(window.msg+" "+msg);
+    }
+
+    function f2()
+    {
+        var msg ="hello from f2";
+        alert(window.msg+" "+msg);
+    }
+    f1();
+    f2();
+</script>
+-->
+
+<form>
+        
+        <h1>QUESTION PAPER</h1>
+        
+        1. WHAT DAY IS TODAY? <br>
+        <input type="radio" name= "option1" id="t1">10 <br>
+        <input type="radio" name= "option1" id="t2">11 <br>
+        <input type="radio" name= "option1" id="t3">12 <br>
+        <input type="radio" name= "option1" id="t4">13 <br>
+        <input type="radio" name= "option1" id="t5">14 <br>
+        
+        2. WHAT MONTH IS THIS?<br>
+        <input type="radio" name= "option2">6<br>
+        <input type="radio" name= "option2">7<br>
+        <input type="radio" name= "option2">8<br>
+        <input type="radio" name= "option2">9<br>
+        <input type="radio" name= "option2">10<br>
+        <br>
+        3. WHAT YEAR IS THIS ?<br>
+        <input type="radio" name= "option3">2013<br>
+        <input type="radio" name= "option3">2014<br>
+        <input type="radio" name= "option3">2015<br>
+        <input type="radio" name= "option3">2016<br>
+        <input type="radio" name= "option3">2017<br>
+        <br>
+        4. WHAT HOUR IS THIS?<br>
+        <input type="radio" name= "option4">9<br>
+        <input type="radio" name= "option4">10<br>
+        <input type="radio" name= "option4">11<br>
+        <input type="radio" name= "option4">12<br>
+        <input type="radio" name= "option4">13<br>
+        <br>
+        
+        5. WHAT MINUTE IS THIS ?<br>
+        <input type="radio" name= "option5">50<br>
+        <input type="radio" name= "option5">51<br>
+        <input type="radio" name= "option5">52<br>
+        <input type="radio" name= "option5">53<br>
+        <input type="radio" name= "option5">58<br>
+
+        
+        
+    </form>
+
+    <input type="button" value="submit"onclick='f1()'>
+    <span id="span1"></span>
+    
+    <script>
+        function f1(){
+            var score=0;
+        
+        var option1=document.getElementsByName("option1");
+        var option2=document.getElementsByName("option2");
+        var option3=document.getElementsByName("option3");
+        var option4=document.getElementsByName("option4");
+        var option5=document.getElementsByName("option5");
+
+       // var msg="";
+
+        if (option1[3].checked)
+         score+=1;
+         if (option2[3].checked)
+          score+=1;
+         if (option3[4].checked)
+          score+=1;
+         if (option4[1].checked)
+          score+=1;
+         if (option5[4].checked)
+          score+=1;
+
+         document.getElementById("span1").innerHTML=`${score} /5`;
+        
+    }
+        </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

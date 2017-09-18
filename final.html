@@ -1,0 +1,40 @@
+
+<script src="final.js"></script>
+
+<body  >
+
+    <h1> PHONE BILL </h1>
+
+    <h3> ITEM </h3>
+             <select id = "item1" onchange="change()">
+            <option value="iphone8">iphone8</option>
+            <option value="mi">mi</option>
+            <option value="vivo">vivo</option>
+          </select>
+          <br> <br>
+    
+    <b> PRICE <b> <span id = "price1"> <br> <br>
+    <b> QUANTITY <b> 
+    <input type = "radio" name = "quantity" > ONE </input>
+    <input type = "radio" name = "quantity" > TWO </input>
+    <input type = "radio" name = "quantity" > THREE </input>
+    <br> <br>
+
+    <b> PAYMENT MODE <b> 
+            <input type = "radio" name = "payment" > CASH </input>
+            <input type = "radio" name = "payment" > PAYTM </input>
+            <input type = "radio" name = "payment" > FREECHARGE </input>
+    <br> <br>
+
+    <br> 
+
+    <input type = "checkbox" name = "door" value = "door " > HOME DELIVERY? </input> <br> <span id = "del"> <br> <br>
+
+    <button onclick = "calc()"> SUBMIT </button>
+
+    <h2> SUMMARY </h2>
+    ITEM : <span id = "sitem"> </span> <br>
+    PRICE: <span id = "sprice"> </span><br>
+    PAYMENT CHARGE: <span id = "spayment"> </span><br>
+    DELIVERY CHARGE: <span id = "sdel"> </span><br>
+    TOTAL: <span id = "stotal"> </span><br>

@@ -1,0 +1,398 @@
+<!--<h2>DROP DOWN LIST</h2>
+
+CHOOSE YOUR LANGUAGE:
+<select name="" id="">
+    <option selected value="-1">select</option>
+    <option selected value="">hindi</option>
+    <option value="">english</option>
+    <option value="">marathi</option>
+    <option value="">kannada</option>
+</select>
+
+
+<h2>LIST BOX</h2>
+
+CHOOSE FAVOURITE SUBJECTS: <br>
+<select multiple name="" id="">
+    <option value="">maths</option>
+    <option value="">physics</option>
+    <option value="">chemistry</option>
+    <option value="">philosophy</option>
+    <option value="">history</option>
+</select>
+
+<br><br>
+
+UPLOAD A FILE
+
+<input type="file" name="file1">
+
+<br><br><br>
+
+ENTER THE COMMENTS : 
+
+<textarea name="" id="" cols="30" rows="10"></textarea>
+
+
+
+<h1>PARAGRAPH TAGS</h1>
+
+<p>this is paragraph</p>
+
+<div>this is division 1</div>
+
+<pre>this predf     ned   ksdjks</pre>  <!-- spaces remain as it is
+
+<span>this is span tag</span>       <!--to give messages in one line/word 
+
+
+<h1>BLOCK TAGS</h1>
+
+<h1>first heading</h1>
+
+<div>this is division</div>
+
+<ol>
+    <li>orange</li>
+    <li>apple</li>
+</ol>
+
+<h2>inline tags</h2>
+
+<span>span 2</span>
+<span>span 2</span> <br>
+
+
+ENTER NAME: <input type="text"/>
+
+ENTER PASSWORD: <input type="password"/>
+
+
+
+<h1>HTML5 INPUT ELEMENT ATTRIBUTES</h1>
+
+<h2>HTML5 FORMS 2.0</h2>
+
+
+ENTER NO1:<input type=number><br>
+ENTER NO1:<input type=number min="1" max="10" step="2"><br>
+
+<input type="text" placeholder="Enter name:"><br>
+<input type="password" placeholder="password"><br>
+<input type="number" placeholder="enter marks"><br>
+
+
+
+<input type="date"><br>
+<input type="time"><br>
+<input type="week"><br>
+<input type="month"><br>
+<input type="datetime-local"><br>
+
+------------------COLOR------------------------------------------
+
+
+
+CHOOSE COLOR: <input type="color"><br>
+CHOOSE RANGE: <input type="range"><br>
+ENTER TELEPHONE NUMBER : <input type="number"><br>
+
+ENTER EMAIL <input type="email"><br>
+ENTER URL <input type="url"><br><br>
+
+ENTER TEXT TO SEARCH <input type="search"><br>
+ENTER YOUR AGE <input type="number"><br>
+
+
+
+
+<form action="a2.html">
+    enter email: <input type="email" name="email1" required><br>
+    enter company url: <input type="url" required><br>
+    <input type="submit"><br>
+
+
+</form>
+
+
+
+<h1>page 1</h1>
+
+<form action="a2.html" method ="get">  
+
+   Enter Name<input type="text" name="name"><br>
+
+    <input type="submit">
+
+</form>
+
+<h1>AUTOCOMPLETE</h1>
+<form action="">
+
+    Enter Hobby : <input type="text" autocomplete="on" list="hobbies"><br>
+    <input type="submit">
+
+    <datalist id="hobbies">
+
+            <option value="singing"/>
+            <option value="dancing"/>
+            <option value="reading"/>
+            <option value="sleeping"/>
+            <option value="cheap thrills"/>
+            <option value="sasti masti"/>
+            <option value="sasta nasha"/>
+
+
+    </datalist>
+
+
+
+</form>
+
+
+<h1>Output elemen, examplest</h1>
+
+<form action="">
+    Enter your name: <input type="text" name="t1"><br>
+    <input type="button" value="say hello" onclick='op.value="hello " + t1.value'><br>
+    <output name= "op"></output>
+</form>
+
+
+<form action="">
+<h1>output example 2</h1>
+
+Choose Range : <input type="range" oninput="op.value=this.value"><br> 
+<output name="op"></output>
+
+
+</form>
+
+
+
+<h1>handling two submit buttons</h1>
+
+<form action="_blank">
+
+    <input type="submit" value="goto p1" formaction="a2.html">
+    <input type="submit" value="goto p2" formaction="a1.html">
+
+</form>
+
+
+<h1>autofocus</h1>
+
+<form action="a2.html" method ="get">  
+        
+           Enter Name<input type="text" name="name"><br>
+           Enter Name2<input type="text" name="name2" autofocus><br>
+        
+            <input type="submit">
+        
+        </form>
+
+--------------------------------------------------------------------
+
+<form action="a1.html">
+
+    Enter Email: <input type="email" name="email" method="get"><br>
+    <input type="submit"><br>
+
+
+</form>
+
+    <input type="text" name="t1" form="form1">
+
+---------------------------------------------------------------
+
+
+<h1>select multiple files</h1>  
+
+<input type="file" multiple>
+
+<form action="a2.html">
+    <input type="image" src="modi.png">
+</form>
+
+---------------------------------------------------
+
+
+<h1>HTML5 MULTIMEDIA</h1>
+
+<h1>Audio tag</h1>
+
+<video controls autoplay loop src="https://www.w3schools.com/html/mov_bbb.mp4" ></video>
+
+----------------------------------------------------------
+
+
+
+<h1>Inline Elements</h1>
+ Mr. umer got<mark> lost in his mobile</mark>phone <br>
+ he is always busy, can meet u at <time>00:00 </time><br>
+
+ <br>
+ <br>
+
+select range to see meter <input type="range" oninput="t1.value=this.value">
+
+ <h2>meter tag</h2>
+
+ <meter value=5 max=100 id="t1"> </meter>
+
+    <h2>progress tag</h2>
+    <progress ></progress>
+
+
+
+<head>
+    <style>
+        h1{color: brown;
+        text-align:center;
+        text-decoration: underline;
+        text-transform: uppercase}
+        p{color: green}
+        span{color: red;
+        text-align:center;}
+
+        div{border:5px solid orange}
+
+        p{border:5px solid yellowgreen}
+
+        pre{border:5px solid green}
+        </style>
+</head>
+
+<body>
+    <h1 >CSS , example 1</h1>
+
+    <div >
+        this is division 1
+    </div>
+
+    <p >this is paragraph</p>
+    <pre >this is predefined</pre>
+
+
+
+    
+</body>
+
+
+
+<h1></h1>
+
+<body>
+    
+
+<h2 style="color:brown">list of students</h2>
+
+<h3 style="color:green">these students are into software development</h3> 
+
+<ol style="color:blue"  type="I">
+    <li>swathi</li>
+    <li>ramya</li>
+    <li>puru</li>
+    <li>umer</li>
+
+</ol>
+
+<h2 style="color:brown">list of courses</h2>
+
+<h3 style="color:green">these are the courses offered</h3> 
+
+
+<ul style="color:blue" type="">
+    <li>ram</li>
+    <li>shyam</li>
+    <li>puru</li>
+    <li>umer</li>
+
+</ul>
+</body>
+
+
+
+<head></head>
+<body>
+
+    <style>
+       .heading{
+           text-align: center;
+           text-decoration: underline;
+           text-transform: uppercase
+       }
+        </style>
+
+    <h1 class="heading">block tags,example 1</h1>
+    <ol>
+        <li>raj</li>
+        <li>dev</li>
+        <li>umer</li>
+        <li>puru</li>
+        </ol>  
+        <h1 class="heading">profiles</h1>  
+
+        <span>SOFTWARE TRAINING</span>
+        <span>SOFTWARE TESTING</span>
+        <span>SOFTWARE DEVELOPMENT</span>
+</body>
+
+-->
+
+<h1 style="background-color:red">RED BACKGROUND</h1>
+
+<h1 style="background-color:green">GREEN BACKGROUND</h1>
+
+<h1 style="background-color:blue">BLUE BACKGROUND</h1>
+
+<h1 style="background-color:blueviolet">BLUEVIOLET BACKGROUND</h1>
+
+<h1 style="background-color:yellow">YELLOW BACKGROUND</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

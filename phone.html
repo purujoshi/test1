@@ -1,0 +1,70 @@
+<script>
+        function f1(p)
+        {
+
+            var prices=[70,40,26,15];
+
+            document.getElementById("span1").innerHTML=70;
+
+            var phones=document.getElementsById("phones");
+            var m=phones.options[selectedIndex].value;
+            document.getElementById("span1").innerHTML=prices[i];          
+
+            if(p=="iphone8")
+            {
+              document.getElementById("span1").innerHTML=("PRICE:" + prices[0]);
+              <img src="ip.jfif" alt=""/>
+            }
+            calPrice();
+        }
+            
+      function calPrice()
+        {
+
+        if (t1[0].checked)
+        x1=prices[i];
+        document.getElementById("span1").innerHTML=x1;
+        if (t2[0].checked)
+        document.getElementById("span2").innerHTML=prices[i]*2;
+        if (t3[0].checked)
+        document.getElementById("span3").innerHTML=prices[i]*3; 
+       
+            payment();
+        } 
+        
+      function payment(q){
+
+        if (p1[0].checked)
+        document.getElementById("span1").innerHTML=;
+        if (p2[0].checked)
+        document.getElementById("span2").innerHTML=prices[i]*2;
+        if (p3[0].checked)
+        document.getElementById("span3").innerHTML=prices[i]*3; 
+      }
+          
+    </script>
+    
+    <h1> DROP DOWN LIST EXAMPLE</h1>
+    
+    <select  id="phones">
+
+        <option value="iphon8"  onchange='f1(this.value)' id="p1">IPHONE8</option>
+        <option value="note4" onchange='f1(this.value)' id="p2">NOTE4</option>
+        <option value="vivo" onchange= 'f1(this.value)' id="p3">VIVO</option>
+        <option value="mi" onchange= 'f1(this.value)' id="p4">MI</option>
+
+    </select>
+
+    <br><br>
+
+HOW MANY PIECES DO YOU WANT? <br>
+    <input type="radio" name= "t1" id="">1<br>
+    <input type="radio" name= "t1">2<br>
+    <input type="radio" name= "t1">3<br>
+
+SELECT MODE OF PAYMENT <br>
+<input type="radio" name="p1">PAYTM<br>
+<input type="radio" name="p2">CARD<br>
+
+    
+    <span id="span1"></span>
